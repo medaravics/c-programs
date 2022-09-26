@@ -8,10 +8,7 @@ int extractFirstNumberOccurence(const char *str, char numberString[])
   int i=0;
   while( (*str != '\0') & !(*str >= '0' && *str <= '9'))  str++; //pass until a digit is found.
   //copy digits until a character is found. Goal is to extract first occurance of a number. 
-  while( (*str != '\0') & (*str >= '0' && *str <= '9')) { 
-      numberString[i++]=*str++;
-      //str++;
-  }
+  while( (*str != '\0') & (*str >= '0' && *str <= '9'))   numberString[i++]=*str++;
   numberString[i]='\0';
   return i;
 }
